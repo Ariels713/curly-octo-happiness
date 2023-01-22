@@ -1,4 +1,4 @@
-const player = {
+const Andre = {
 	playerName: 'Andre Shin',
 	playerAbility: {
 		offence: 3,
@@ -20,4 +20,4 @@ const player = {
 	]
 };
 
-export default player
+export default Andre;

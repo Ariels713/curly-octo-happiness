@@ -1,14 +1,50 @@
 <script>
 	import Card from '$lib/card/Card.svelte';
-	import player from '$lib/data/data.js';
+	import Andre from '$lib/data/Andre.js';
+	import AndreImage from '$lib/assets/images/Andre_shin.png';
+	import andreBG from '$lib/assets/svg/andreBG.svg';
+	import Arya from '../lib/data/Arya';
+	import aryaBG from '$lib/assets/svg/aryaBG.svg';
+	import AryaImage from '../lib/assets/images/Arya_Knox.png';
+	import Barrington from '$lib/assets/images/Barrington.png'
+	import bjBG from '$lib/assets/svg/bjBG.svg';
+
+	let toggle = false;
+
+	function handleClick() {
+		toggle = !toggle;
+	}
 </script>
 
-<div>
-	<Card {...player} />
+<div class="background">
+	<div data-toggle={`${toggle}`} class="board">
+		<Card {...Andre} playerImage={AndreImage} bg={andreBG} />
+		<Card {...Arya} playerImage={AryaImage} bg={aryaBG} />
+		<Card {...Arya} playerImage={Barrington} bg={bjBG} />
+	</div>
+
+	<div class="btnWrapper">
+		<button on:click={handleClick}>Toggle</button>
+	</div>
 </div>
 
 <style>
-	div {
+	.board {
+		min-width: 700px;
+		margin-inline: auto;
+		--min-column-width: min(320px, 100%);
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(var(--min-column-width), 1fr));
+		gap: 16px;
+		padding: 16px;
+		transform: scale(1) rotateX(0deg) rotateZ(0deg);
+		transition: transform 0.5s ease-in-out;
+	}
+	[data-toggle='true'] {
+		transform:  rotateX(56deg) translate(-100px, -300px) scale(0.6) rotateZ(314deg);
+	}
+	.background {
+		position: relative;
 		font-family: sans-serif;
 		display: grid;
 		place-content: center;
@@ -32,5 +68,10 @@
 			hsl(156, 100%, 45.1%) 100%
 		);
 		min-height: 100vh;
+	}
+	.btnWrapper {
+		position: absolute;
+		left: 20px;
+		top: 20px;
 	}
 </style>
