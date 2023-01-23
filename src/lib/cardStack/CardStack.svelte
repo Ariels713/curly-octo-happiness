@@ -47,7 +47,7 @@
 		height: 500px;
 		border-radius: 1rem;
 		box-shadow: var(--shadow-elevation-high);
-		/* background-color: #1b9956; */
+        background-color: #1A8842;
 	}
 
 	.card {
@@ -65,43 +65,43 @@
 	}
 
 	.card:nth-child(1) {
-		background-color: hsla(148, 70%, 50%, 1);
+		background-color: hsla(142, 68%, 35%, 1);
 		transform: translate3d(5px, -5px, -1px);
 	}
 	.card:nth-child(2) {
-		background-color: hsla(148, 70%, 55%, 1);
+		background-color: hsla(142, 68%, 35%, 1);
 		transform: translate3d(10px, -10px, -2px);
 	}
 	.card:nth-child(3) {
-		background-color: hsla(148, 70%, 60%, 1);
+		background-color: hsla(142, 68%, 35%, 1);
 		transform: translate3d(15px, -15px, -3px);
 	}
 	.card:nth-child(4) {
-		background-color: 6hsla (148, 70%, 65%, 1);
+		background-color: hsla(142, 68%, 35%, 1);
 		transform: translate3d(20px, -20px, -4px);
 	}
 	.card:nth-child(5) {
-		background-color: hsla(148, 70%, 70%, 1);
+		background-color: hsla(142, 68%, 38%, 1);
 		transform: translate3d(25px, -25px, -5px);
 	}
 	.card:nth-child(6) {
-		background-color: hsla(148, 70%, 75%, 1);
+		background-color: hsla(142, 68%, 41%, 1);
 		transform: translate3d(30px, -30px, -6px);
 	}
 	.card:nth-child(7) {
-		background-color: hsla(148, 70%, 80%, 1);
+		background-color: hsla(142, 68%, 44%, 1);
 		transform: translate3d(35px, -35px, -7px);
 	}
 	.card:nth-child(8) {
-		background-color: hsla(148, 70%, 85%, 1);
+		background-color: hsla(142, 68%, 47%, 1);
 		transform: translate3d(40px, -40px, -8px);
 	}
 	.card:nth-child(9) {
-		background-color: hsla(148, 70%, 90%, 1);
+		background-color: hsla(142, 68%, 50%, 1);
 		transform: translate3d(45px, -45px, -9px);
 	}
 	.card:nth-child(10) {
-		background-color: hsla(148, 70%, 95%, 1);
+		background-color: hsla(142, 68%, 53%, 1);
 		transform: translate3d(50px, -50px, -10px);
 	}
 </style>

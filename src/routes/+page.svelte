@@ -9,8 +9,10 @@
 	import AryaImage from '../lib/assets/images/Arya_Knox.png';
 	import Barrington from '$lib/assets/images/Barrington.png';
 	import bjBG from '$lib/assets/svg/bjBG.svg';
+	import Modal from '../lib/modal/Modal.svelte';
 
 	let toggle = false;
+	let showModal = false;
 
 	function handleClick() {
 		toggle = !toggle;
@@ -32,7 +34,15 @@
 
 	<div class="btnWrapper">
 		<button on:click={handleClick}>Toggle</button>
+		<button on:click={() => (showModal = true)}> show modal </button>
 	</div>
+
+	{#if showModal}
+		<Modal on:close={() => (showModal = false)}>
+			<Card {...Arya} playerImage={AryaImage} bg={aryaBG} />
+			<Card {...Arya} playerImage={Barrington} bg={bjBG} />
+		</Modal>
+	{/if}
 </div>
 
 <style>
