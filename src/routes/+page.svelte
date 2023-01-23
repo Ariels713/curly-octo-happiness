@@ -1,12 +1,13 @@
 <script>
 	import Card from '$lib/card/Card.svelte';
+	import CardStack from '../lib/cardStack/CardStack.svelte';
 	import Andre from '$lib/data/Andre.js';
 	import AndreImage from '$lib/assets/images/Andre_shin.png';
 	import andreBG from '$lib/assets/svg/andreBG.svg';
 	import Arya from '../lib/data/Arya';
 	import aryaBG from '$lib/assets/svg/aryaBG.svg';
 	import AryaImage from '../lib/assets/images/Arya_Knox.png';
-	import Barrington from '$lib/assets/images/Barrington.png'
+	import Barrington from '$lib/assets/images/Barrington.png';
 	import bjBG from '$lib/assets/svg/bjBG.svg';
 
 	let toggle = false;
@@ -18,6 +19,12 @@
 
 <div class="background">
 	<div data-toggle={`${toggle}`} class="board">
+		<div class="cardStack">
+			<CardStack />
+		</div>
+		<Card {...Andre} playerImage={AndreImage} bg={andreBG} />
+		<Card {...Arya} playerImage={AryaImage} bg={aryaBG} />
+		<Card {...Arya} playerImage={Barrington} bg={bjBG} />
 		<Card {...Andre} playerImage={AndreImage} bg={andreBG} />
 		<Card {...Arya} playerImage={AryaImage} bg={aryaBG} />
 		<Card {...Arya} playerImage={Barrington} bg={bjBG} />
@@ -41,7 +48,7 @@
 		transition: transform 0.5s ease-in-out;
 	}
 	[data-toggle='true'] {
-		transform:  rotateX(56deg) translate(-100px, -300px) scale(0.6) rotateZ(314deg);
+		transform: rotateX(56deg) translate(100px, -300px) scale(0.6) rotateZ(314deg);
 	}
 	.background {
 		position: relative;
@@ -71,7 +78,12 @@
 	}
 	.btnWrapper {
 		position: absolute;
-		left: 20px;
+		right: 20px;
 		top: 20px;
+	}
+	.cardStack {
+		position: absolute;
+		top: -320px;
+		left: -410px;
 	}
 </style>

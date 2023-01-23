@@ -15,6 +15,7 @@
 	export let bg = '';
 </script>
 
+
 <div class="card">
 	<div class="layer" />
 	<div class="layer" />
